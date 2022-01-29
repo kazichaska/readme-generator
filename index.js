@@ -3,9 +3,9 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const choices = require('inquirer/lib/objects/choices');
 const generate = require('./utils/generateMarkdown');
-console.log(require('./utils/generateMarkdown')());
+const path = require('path');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 const questions = [
     {
         type: 'input',
@@ -45,30 +45,19 @@ const questions = [
     },
 ];
 
-inquirer.prompt(questions).then((data) => {
-    console.log(JSON.stringify(data, null, ' '));
-    console.log(data.project_title);
-    const generateText = generate.generateMarkdown(data);
-    writeToFile('./utils/README.md', generateText);
-});
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
-    // console.log(fileName);
-    // console.log(data);
-    // try {
-    //     fs.writeFile('./utils/README.MD', data)
-    // } catch (err) {
-    //     console.error(err);
-    // }
-    fs.writeFile(fileName, data), (err) => {
-        if (err) throw err;
-        console.log('The file has been saved!');
-    };
+    return fs.writeFileSync(path.join(process.cwd(), "utils", fileName), data);
 };
 
-// TODO: Create a function to initialize app
-function init() {}
+// function to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then((returnedData) => {
+        writeToFile('generatedReadme.md', generate({...returnedData}));
+    })
+}
 
 // Function call to initialize app
 init();
