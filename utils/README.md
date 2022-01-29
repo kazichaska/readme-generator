@@ -1,1 +1,0 @@
-{"project_title":"Cool project","description":"This is going to be very cool project","installation_instruction":"run npm install inquirer package","usage_information":"node index.js","contribution_guidelines":"create pull request","test_instructions":"run node index.js and test outputs","license":[]}
