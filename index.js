@@ -9,7 +9,7 @@ const path = require('path');
 const questions = [
     {
         type: 'input',
-        name: 'project_title',
+        name: 'title',
         message: "Project title:"
     },
     {
@@ -19,29 +19,29 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installation_instruction',
+        name: 'installation',
         message: "Installation instruction:"
     },
     {
         type: 'input',
-        name: 'usage_information',
+        name: 'usage',
         message: "Usage information:"
     },
     {
         type: 'input',
-        name: 'contribution_guidelines',
+        name: 'contribution',
         message: "Contribution Guidelines:"
     },
     {
         type: 'input',
-        name: 'test_instructions',
+        name: 'test',
         message: "Test instructions:"
     },
     {
         type: 'checkbox',
         name: 'license',
         message: "Pick the type of license:",
-        choices: ['MIT', 'GNU', 'ISC', 'Microsoft Public License', 'Open Software License 3.0' ]
+        choices: ['MIT', 'Apache', 'GLP', 'BSD', 'None' ]
     },
 ];
 
