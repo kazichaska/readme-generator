@@ -1,76 +1,87 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
 
 const { fstat } = require("fs");
 
-function licenseBadge (data) {
+// If there is no license, return an empty string
+function renderLicenseBadge(data) {
+  if (data.license) {
+    return `![License](https://img.shields.io/badge/License-${data.license}%20-yellow.svg)`;
+  } else {
+    return '';
+  }
+}
+
+// If there is no license, return an empty string
+function renderLicenseLink(data) {
   const licenseType = (data.license);
   if (licenseType == 'MIT') {
-      licenseDetail = `[License: MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)`
+      licenseDetail = `[MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)`;
   };
   if (licenseType == 'Apache') {
-    licenseDetail = `![License: GNU]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20"`
+    licenseDetail = `[Apache]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20"`;
   };
   if (licenseType == 'GLP') {
-    licenseDetail = `![License: ISC]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#3-gpl"`
+    licenseDetail = `[GLP]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#3-gpl"`;
   };
   if (licenseType == 'BSD') {
-    licenseDetail = `![License: BSD]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case"`
+    licenseDetail = `[BSD]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case"`;
   };
   if (licenseType == 'None') {
-    licenseDetail = `"None"`
+    licenseDetail = `"None"`;
   };
   return licenseDetail;
 }
 
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(data) {
+  if (data.license) {
+   return `## License`;
+  } else {
+    return '';
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  licenseBadge(data);
-  console.log(data);
+  renderLicenseBadge(data);
+  renderLicenseLink(data);
+  renderLicenseSection(data);
+  
+  // console.log(data);
   return `# ${data.title}
+
+  ${renderLicenseBadge(data)}
 
   ## Table of contents
   1. [Title](#title)
   2. [Description](#description)
-  3. [Installation Instruction](#installation)
-  4. [Usage Information](#usage)
-  5. [Contribution Guidelines](#contributeion)
-  6. [Test Instructions](#test)
+  3. [Installation](#installation)
+  4. [Usage](#usage)
+  5. [Contribution](#contribution)
+  6. [Test](#test)
   7. [License](#license)
 
-  ## Project Title
+  ## Title
   ${data.title}
 
   ## Description
   ${data.description}
 
-  ## Installation Instruction
+  ## Installation
   ${data.installation}
 
-  ## Usage Information
+  ## Usage
   ${data.usage}
 
-  ## Contribution Guidelines
+  ## Contribution
   ${data.contribution}
 
-  ## Test Instructions
+  ## Test
   ${data.test}
 
-  ## License
-  ${licenseBadge(data)}
+  ${renderLicenseSection(data)}
+  ${renderLicenseLink(data)}
 
 `;
-
 }
 
 module.exports = generateMarkdown;
