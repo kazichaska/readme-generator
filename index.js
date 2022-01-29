@@ -8,17 +8,22 @@ const questions = [
     {
         type: 'input',
         name: 'project_title',
-        message: "Enter project title here:"
+        message: "Project title:"
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: "Project description:"
     },
     {
         type: 'input',
         name: 'installation_instruction',
-        message: "Enter installation instruction:"
+        message: "Installation instruction:"
     },
     {
         type: 'input',
         name: 'usage_information',
-        message: "Enter usage information:"
+        message: "Usage information:"
     },
     {
         type: 'input',
@@ -28,7 +33,7 @@ const questions = [
     {
         type: 'input',
         name: 'test_instructions',
-        message: "Enter test instructions:"
+        message: "Test instructions:"
     },
     {
         type: 'list',
