@@ -1,5 +1,5 @@
 
-const { fstat } = require("fs");
+// const { fstat } = require("fs");
 
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
@@ -40,7 +40,7 @@ function renderLicenseSection(data) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
   renderLicenseBadge(data);
   renderLicenseLink(data);

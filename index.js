@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const choices = require('inquirer/lib/objects/choices');
+// const choices = require('inquirer/lib/objects/choices');
 const generate = require('./utils/generateMarkdown');
 const path = require('path');
 

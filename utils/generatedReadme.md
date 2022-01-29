@@ -1,6 +1,6 @@
-# Readme Generator
+# My cool project
 
-  ![License](https://img.shields.io/badge/License-MIT%20-yellow.svg)
+  ![License](https://img.shields.io/badge/License-Apache%20-yellow.svg)
 
   ## Table of contents
   1. [Title](#title)
@@ -12,10 +12,10 @@
   7. [License](#license)
 
   ## Title
-  Readme Generator
+  My cool project
 
   ## Description
-  This would generate readme file
+  This project has all the cool stuff
 
   ## Installation
   run `npm init and npm install inquirer`
@@ -24,11 +24,11 @@
   run `node index.js` file to start for question prompt
 
   ## Contribution
-  always create PR
+  always create PR and work on your own branch
 
   ## Test
   test in the local environment
 
   ## License
-  [MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)
+  [Apache]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20"
 
