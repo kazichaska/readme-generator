@@ -1,4 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+const { fstat } = require("fs");
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
@@ -12,8 +15,9 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  
   console.log(data);
-  return `# ${data.project_title}
+  return `# ${data.description}
 
   ## Table of contents
   1. [Description](#description)
@@ -31,5 +35,5 @@ function generateMarkdown(data) {
 `;
 }
 
-generateMarkdown();
+// generateMarkdown();
 module.exports = generateMarkdown;

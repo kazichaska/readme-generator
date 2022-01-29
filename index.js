@@ -2,6 +2,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const choices = require('inquirer/lib/objects/choices');
+const generate = require('./utils/generateMarkdown');
+console.log(require('./utils/generateMarkdown')());
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -36,8 +38,8 @@ const questions = [
         message: "Test instructions:"
     },
     {
-        type: 'list',
-        name: 'licenses',
+        type: 'checkbox',
+        name: 'license',
         message: "Pick the type of license:",
         choices: ['MIT', 'GNU', 'ISC', 'Microsoft Public License', 'Open Software License 3.0' ]
     },
@@ -46,7 +48,8 @@ const questions = [
 inquirer.prompt(questions).then((data) => {
     console.log(JSON.stringify(data, null, ' '));
     console.log(data.project_title);
-    writeToFile("./utils/README.md", data);
+    const generateText = generate.generateMarkdown(data);
+    writeToFile('./utils/README.md', generateText);
 });
 
 // TODO: Create a function to write README file
@@ -58,10 +61,10 @@ function writeToFile(fileName, data) {
     // } catch (err) {
     //     console.error(err);
     // }
-    fs.writeFile(fileName, JSON.stringify(data), (err) => {
+    fs.writeFile(fileName, data), (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
-    });
+    };
 };
 
 // TODO: Create a function to initialize app
