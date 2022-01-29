@@ -14,19 +14,19 @@ function renderLicenseBadge(data) {
 function renderLicenseLink(data) {
   const licenseType = (data.license);
   if (licenseType == 'MIT') {
-      licenseDetail = `[MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)`;
+      licenseDetail = `[MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)`
   };
   if (licenseType == 'Apache') {
-    licenseDetail = `[Apache]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20"`;
+    licenseDetail = `[Apache]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20"`
   };
   if (licenseType == 'GLP') {
-    licenseDetail = `[GLP]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#3-gpl"`;
+    licenseDetail = `[GLP]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#3-gpl"`
   };
   if (licenseType == 'BSD') {
-    licenseDetail = `[BSD]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case"`;
+    licenseDetail = `[BSD]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case"`
   };
   if (licenseType == 'None') {
-    licenseDetail = `"None"`;
+    licenseDetail = `"None"`
   };
   return licenseDetail;
 }

@@ -1,6 +1,6 @@
-# sldfjsljflskd
+# Readme Generator
 
-  ![License](https://img.shields.io/badge/License-BSD%20-yellow.svg);
+  ![License](https://img.shields.io/badge/License-MIT%20-yellow.svg)
 
   ## Table of contents
   1. [Title](#title)
@@ -12,23 +12,23 @@
   7. [License](#license)
 
   ## Title
-  sldfjsljflskd;
+  Readme Generator
 
   ## Description
-  lrghjdlfjlsdkfg;
+  This would generate readme file
 
   ## Installation
-  dlfgkjwpeokelkrjh;
+  run `npm init and npm install inquirer`
 
   ## Usage
-  s;dflkgjsldknflsd;
+  run `node index.js` file to start for question prompt
 
   ## Contribution
-  dlfkgjlsdjflsd;
+  always create PR
 
   ## Test
-  dflgjsldkfjsld;
+  test in the local environment
 
-  ## License;
-  [BSD]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case";
+  ## License
+  [MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)
 
