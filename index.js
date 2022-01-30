@@ -29,8 +29,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contribution',
-        message: "Contribution Guidelines:"
+        name: 'contributing',
+        message: "Contributing Guidelines:"
     },
     {
         type: 'input',
@@ -42,6 +42,21 @@ const questions = [
         name: 'license',
         message: "Pick the type of license:",
         choices: ['MIT', 'Apache', 'GLP', 'BSD', 'None' ]
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: "Do you have any question about this application:"
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: "Please enter your Github username:"
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "Please enter your email adddress:"
     },
 ];
 

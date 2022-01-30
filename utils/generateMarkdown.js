@@ -1,5 +1,5 @@
 
-// const { fstat } = require("fs");
+const { fstat } = require("fs");
 
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
@@ -17,18 +17,18 @@ function renderLicenseLink(data) {
       licenseDetail = `[MIT](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#mit-license)`
   };
   if (licenseType == 'Apache') {
-    licenseDetail = `[Apache]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20"`
+    licenseDetail = `[Apache](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#apache-license-20)`
   };
   if (licenseType == 'GLP') {
-    licenseDetail = `[GLP]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#3-gpl"`
+    licenseDetail = `[GLP](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#3-gpl)`
   };
   if (licenseType == 'BSD') {
-    licenseDetail = `[BSD]"https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case"`
+    licenseDetail = `[BSD](https://gist.github.com/nicolasdao/a7adda51f2f185e8d2700e1573d8a633#the-bsd-license-case)`
   };
   if (licenseType == 'None') {
     licenseDetail = `"None"`
   };
-  return licenseDetail;
+  return licenseDetail
 }
 
 // If there is no license, return an empty string
@@ -56,9 +56,10 @@ function generateMarkdown(data) {
   2. [Description](#description)
   3. [Installation](#installation)
   4. [Usage](#usage)
-  5. [Contribution](#contribution)
+  5. [Contributing](#contributing)
   6. [Test](#test)
   7. [License](#license)
+  8. [Questions](#questions)
 
   ## Title
   ${data.title}
@@ -73,7 +74,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## Contribution
-  ${data.contribution}
+  ${data.contributing}
 
   ## Test
   ${data.test}
@@ -81,6 +82,10 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data)}
   ${renderLicenseLink(data)}
 
+  ## Questions
+  ${data.questions}<br />
+  Find me on Github [${data.username}](https://github.com/${data.username})<br />
+  Email me with any question: ${data.email} <br />
 `;
 }
 
